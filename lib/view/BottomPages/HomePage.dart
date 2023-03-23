@@ -22,57 +22,50 @@ class _HomePageState extends State<HomePage> {
           child: NestedScrollView(
             headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled){
               return <Widget>[
-                SliverAppBar( // this is where I would like to set some minimum constraint
-                  elevation: AllDimension.zero,
-                  expandedHeight: AllDimension.oneTen,
-                  collapsedHeight: AllDimension.oneTen,
-                  automaticallyImplyLeading: false,
-                  floating: false,
-                  pinned: false,
-                  backgroundColor: AllColors.whiteColor,
-                  flexibleSpace: SingleChildScrollView(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        HomePageWidgets.HeaderWidget(),
-                        SizedBox(height: AllDimension.eight),
-                        HomePageWidgets.TitleWidget("Hire Nearby", AllDimension.twenty, FontWeight.normal, AllColors.officialGreyColor),
-                        SizedBox(height: AllDimension.four),
-                        HomePageWidgets.TitleWidget("Professionals", AllDimension.twentyFour, FontWeight.bold, AllColors.blackColor),
-                      ],
-                    ),
-                  ),
+                //header
+                HomePageWidgets.NestedWidget(
+                    AllDimension.zero,
+                    AllDimension.oneTen,
+                    AllDimension.oneTen,
+                    false,
+                    false,
+                    false,
+                    AllColors.whiteColor,
+                    HomePageWidgets.HeaderHomeWidget()
                 ),
-                SliverAppBar(
-                  elevation: AllDimension.zero,
-                  expandedHeight: AllDimension.sixty,
-                  collapsedHeight: AllDimension.sixty,
-                  automaticallyImplyLeading: false,
-                  floating: false,
-                  pinned: true,
-                  backgroundColor: AllColors.whiteColor,
-                  flexibleSpace: HomePageWidgets.SearchBox(),
+                //search
+                HomePageWidgets.NestedWidget(
+                    AllDimension.zero,
+                    AllDimension.sixty,
+                    AllDimension.sixty,
+                    false,
+                    false,
+                    true,
+                    AllColors.whiteColor,
+                    HomePageWidgets.SearchBox(context)
                 ),
-                SliverAppBar(
-                  elevation: AllDimension.zero,
-                  expandedHeight: AllDimension.eightyFour,
-                  collapsedHeight: AllDimension.eightyFour,
-                  automaticallyImplyLeading: false,
-                  floating: false,
-                  pinned: false,
-                  backgroundColor: AllColors.whiteColor,
-                  flexibleSpace: HomePageWidgets.BannerWidget(),
+                //banner
+                HomePageWidgets.NestedWidget(
+                    AllDimension.zero,
+                    AllDimension.eightyFour,
+                    AllDimension.eightyFour,
+                    false,
+                    false,
+                    false,
+                    AllColors.whiteColor,
+                    HomePageWidgets.BannerWidget()
                 ),
-                SliverAppBar(
-                  elevation: AllDimension.zero,
-                  expandedHeight: AllDimension.oneFifty,
-                  collapsedHeight: AllDimension.oneFourty,
-                  automaticallyImplyLeading: false,
-                  floating: false,
-                  pinned: true,
-                  backgroundColor: AllColors.whiteColor,
-                  flexibleSpace: HomePageWidgets.CategoriesWidgets(),
-                )
+                //categories
+                HomePageWidgets.NestedWidget(
+                    AllDimension.zero,
+                    AllDimension.oneFourty,
+                    AllDimension.oneFourty,
+                    false,
+                    false,
+                    true,
+                    AllColors.whiteColor,
+                    HomePageWidgets.CategoriesWidgets()
+                ),
               ];
             },
             body: SingleChildScrollView(

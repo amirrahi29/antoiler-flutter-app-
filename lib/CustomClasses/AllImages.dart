@@ -14,4 +14,8 @@ class AllImages {
   static String tick = "assets/images/tick.png";
   static String rupee = "assets/images/rupee.png";
   static String experience = "assets/images/experience.png";
+  static String back = "assets/images/back.png";
+  static String delete = "assets/images/delete.png";
+  static String right = "assets/images/right.png";
+  static String cat = "assets/images/cat.png";
 }

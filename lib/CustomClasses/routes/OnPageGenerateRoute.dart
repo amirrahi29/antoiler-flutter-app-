@@ -2,6 +2,7 @@ import 'package:antoiler/view/AuthPages/SignUpPage.dart';
 import 'package:antoiler/view/DashboardPage.dart';
 import 'package:antoiler/view/ErrorPage.dart';
 import 'package:antoiler/view/AuthPages/AuthDetailsPage.dart';
+import 'package:antoiler/view/SearchPage.dart';
 import 'package:antoiler/view/SplashPage.dart';
 import 'package:flutter/material.dart';
 import 'PageConstants.dart';
@@ -26,6 +27,10 @@ class OnPageGenerateRoute {
       case PageConstants.signUpPage:
         {
           return materialPageRoute(widget: SignUpPage());
+        }
+      case PageConstants.searchPage:
+        {
+          return materialPageRoute(widget: SearchPage());
         }
       default:
         {

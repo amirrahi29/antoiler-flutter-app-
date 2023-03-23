@@ -11,5 +11,6 @@ class AllColors {
   static Color officialGreyColor = HexColor("#8E8E8E");
   static Color yellowColor = HexColor("#FECA3C");
   static Color lightRedColor = HexColor("#EBCCCC");
+  static Color blueColor = HexColor("#0096D7");
   static Color? blueColorLight = Color(0XFF1A237A);
 }
