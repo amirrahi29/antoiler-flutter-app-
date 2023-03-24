@@ -18,4 +18,12 @@ class AllImages {
   static String delete = "assets/images/delete.png";
   static String right = "assets/images/right.png";
   static String cat = "assets/images/cat.png";
+
+  static String background = "assets/images/background.png";
+  static String call = "assets/images/call.png";
+  static String secure = "assets/images/secure.png";
+  static String share = "assets/images/share.png";
+  static String workDone = "assets/images/work_done.png";
+  static String backk = "assets/images/backk.png";
+  static String menu = "assets/images/menu.png";
 }

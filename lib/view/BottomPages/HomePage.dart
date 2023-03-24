@@ -80,7 +80,7 @@ class _HomePageState extends State<HomePage> {
                       physics: NeverScrollableScrollPhysics(),
                         itemCount: 5,
                         itemBuilder: (context,index){
-                          return HomePageWidgets.ProfessionalPersonsItems();
+                          return HomePageWidgets.ProfessionalPersonsItems(context);
                         }
                     ),
                   )

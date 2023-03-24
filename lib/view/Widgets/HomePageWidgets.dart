@@ -126,133 +126,138 @@ class HomePageWidgets {
     );
   }
 
-  static Widget ProfessionalPersonsItems() {
-    return Card(
-      child: Container(
-        padding: EdgeInsets.all(AllDimension.eight),
-        child: Stack(
-          clipBehavior: Clip.none,
-          children: <Widget>[
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Expanded(
-                  flex: 1,
-                  child: Container(
-                    height: AllDimension.oneHundred,
-                    width: AllDimension.oneThirty,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage(AllImages.user),
-                        ),
-                        borderRadius:
-                            BorderRadius.circular(AllDimension.twelve)),
-                  ),
-                ),
-                Expanded(
-                  flex: 3,
-                  child: Container(
-                    margin: EdgeInsets.all(AllDimension.eight),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Row(
-                          children: <Widget>[
-                            Text("Pintu Singh",
-                                style: TextStyle(
-                                    fontSize: AllDimension.sixteen,
-                                    color: AllColors.blackColor,
-                                    fontWeight: FontWeight.bold)),
-                            SizedBox(width: AllDimension.eight),
-                            Image.asset(AllImages.tick,
-                                height: AllDimension.twenty,
-                                width: AllDimension.twenty)
-                          ],
-                        ),
-                        SizedBox(height: AllDimension.eight),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: <Widget>[
-                            Icon(Icons.location_on_outlined,
-                                size: AllDimension.twelve,
-                                color: AllColors.mainThemeColor),
-                            SizedBox(width: AllDimension.two),
-                            Expanded(
-                              child: Text("Pinto Park, Gwalior",
-                                  style: TextStyle(
-                                      fontSize: AllDimension.ten,
-                                      color: AllColors.mainThemeColor)),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: AllDimension.eight),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: <Widget>[
-                                Image.asset(AllImages.experience,
-                                    height: AllDimension.sixteen,
-                                    width: AllDimension.twenty),
-                                SizedBox(width: AllDimension.two),
-                                Text("Experience",
-                                    style:
-                                        TextStyle(fontSize: AllDimension.ten)),
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: <Widget>[
-                                Image.asset(AllImages.rupee,
-                                    height: AllDimension.sixteen,
-                                    width: AllDimension.twenty),
-                                SizedBox(width: AllDimension.two),
-                                Text("Charges",
-                                    style:
-                                        TextStyle(fontSize: AllDimension.ten)),
-                              ],
-                            )
-                          ],
-                        ),
-                        SizedBox(height: AllDimension.eight),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Text("20+ yrs.",
-                                style: TextStyle(
-                                    fontSize: AllDimension.sixteen,
-                                    fontWeight: FontWeight.bold,
-                                    color: AllColors.blackColor)),
-                            SizedBox(width: AllDimension.sixteen),
-                            Row(
-                              children: <Widget>[
-                                Text("600",
-                                    style: TextStyle(
-                                        fontSize: AllDimension.sixteen,
-                                        fontWeight: FontWeight.bold,
-                                        color: AllColors.blackColor)),
-                                SizedBox(width: AllDimension.four),
-                                Text("Per Day",
-                                    style: TextStyle(
-                                        fontSize: AllDimension.eight)),
-                              ],
-                            )
-                          ],
-                        ),
-                      ],
+  static Widget ProfessionalPersonsItems(BuildContext context) {
+    return InkWell(
+      onTap: (){
+        Navigator.pushNamed(context, PageConstants.chargeDetailsPage);
+      },
+      child: Card(
+        child: Container(
+          padding: EdgeInsets.all(AllDimension.eight),
+          child: Stack(
+            clipBehavior: Clip.none,
+            children: <Widget>[
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      height: AllDimension.oneHundred,
+                      width: AllDimension.oneThirty,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage(AllImages.user),
+                          ),
+                          borderRadius:
+                              BorderRadius.circular(AllDimension.twelve)),
                     ),
                   ),
-                )
-              ],
-            ),
-            Positioned(
-                top: AllDimension.eight,
-                right: AllDimension.eight,
-                child: Image.asset(AllImages.wishlist,
-                    height: AllDimension.twentyFive,
-                    width: AllDimension.twentyFive))
-          ],
+                  Expanded(
+                    flex: 3,
+                    child: Container(
+                      margin: EdgeInsets.all(AllDimension.eight),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Text("Pintu Singh",
+                                  style: TextStyle(
+                                      fontSize: AllDimension.sixteen,
+                                      color: AllColors.blackColor,
+                                      fontWeight: FontWeight.bold)),
+                              SizedBox(width: AllDimension.eight),
+                              Image.asset(AllImages.tick,
+                                  height: AllDimension.twenty,
+                                  width: AllDimension.twenty)
+                            ],
+                          ),
+                          SizedBox(height: AllDimension.eight),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: <Widget>[
+                              Icon(Icons.location_on_outlined,
+                                  size: AllDimension.twelve,
+                                  color: AllColors.mainThemeColor),
+                              SizedBox(width: AllDimension.two),
+                              Expanded(
+                                child: Text("Pinto Park, Gwalior",
+                                    style: TextStyle(
+                                        fontSize: AllDimension.ten,
+                                        color: AllColors.mainThemeColor)),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: AllDimension.eight),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: <Widget>[
+                                  Image.asset(AllImages.experience,
+                                      height: AllDimension.sixteen,
+                                      width: AllDimension.twenty),
+                                  SizedBox(width: AllDimension.two),
+                                  Text("Experience",
+                                      style:
+                                          TextStyle(fontSize: AllDimension.ten)),
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: <Widget>[
+                                  Image.asset(AllImages.rupee,
+                                      height: AllDimension.sixteen,
+                                      width: AllDimension.twenty),
+                                  SizedBox(width: AllDimension.two),
+                                  Text("Charges",
+                                      style:
+                                          TextStyle(fontSize: AllDimension.ten)),
+                                ],
+                              )
+                            ],
+                          ),
+                          SizedBox(height: AllDimension.eight),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Text("20+ yrs.",
+                                  style: TextStyle(
+                                      fontSize: AllDimension.sixteen,
+                                      fontWeight: FontWeight.bold,
+                                      color: AllColors.blackColor)),
+                              SizedBox(width: AllDimension.sixteen),
+                              Row(
+                                children: <Widget>[
+                                  Text("600",
+                                      style: TextStyle(
+                                          fontSize: AllDimension.sixteen,
+                                          fontWeight: FontWeight.bold,
+                                          color: AllColors.blackColor)),
+                                  SizedBox(width: AllDimension.four),
+                                  Text("Per Day",
+                                      style: TextStyle(
+                                          fontSize: AllDimension.eight)),
+                                ],
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              Positioned(
+                  top: AllDimension.eight,
+                  right: AllDimension.eight,
+                  child: Image.asset(AllImages.wishlist,
+                      height: AllDimension.twentyFive,
+                      width: AllDimension.twentyFive))
+            ],
+          ),
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:antoiler/view/AuthPages/SignUpPage.dart';
+import 'package:antoiler/view/ChargesDetailsPage.dart';
 import 'package:antoiler/view/DashboardPage.dart';
 import 'package:antoiler/view/ErrorPage.dart';
 import 'package:antoiler/view/AuthPages/AuthDetailsPage.dart';
@@ -31,6 +32,10 @@ class OnPageGenerateRoute {
       case PageConstants.searchPage:
         {
           return materialPageRoute(widget: SearchPage());
+        }
+      case PageConstants.chargeDetailsPage:
+        {
+          return materialPageRoute(widget: ChargesDetailsPage());
         }
       default:
         {

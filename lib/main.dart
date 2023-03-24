@@ -4,8 +4,7 @@ import 'package:get/get.dart';
 import 'CustomClasses/AllTitles.dart';
 import 'CustomClasses/routes/OnPageGenerateRoute.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+void main() {
   runApp(MyApp());
 }
 
