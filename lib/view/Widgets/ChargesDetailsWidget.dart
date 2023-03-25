@@ -1,12 +1,13 @@
 import 'package:antoiler/CustomClasses/AllColors.dart';
 import 'package:antoiler/CustomClasses/AllDimension.dart';
 import 'package:antoiler/CustomClasses/AllImages.dart';
+import 'package:antoiler/CustomClasses/routes/PageConstants.dart';
 import 'package:custom_rating_bar/custom_rating_bar.dart';
 import 'package:flutter/material.dart';
 
 class ChargesDetailsWidget{
 
-  static UserDetailsWidget(){
+  static UserDetailsWidget(BuildContext context){
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
@@ -47,16 +48,21 @@ class ChargesDetailsWidget{
               ),
             ),
 
-            Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.all(AllDimension.twelve),
-              decoration: BoxDecoration(
-                color: AllColors.lightMainThemeColor,
-                borderRadius: BorderRadius.all(
-                    Radius.circular(AllDimension.eight)),
+            InkWell(
+              onTap: (){
+                Navigator.pushNamed(context, PageConstants.singleProfilePage);
+              },
+              child: Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(AllDimension.twelve),
+                decoration: BoxDecoration(
+                  color: AllColors.lightMainThemeColor,
+                  borderRadius: BorderRadius.all(
+                      Radius.circular(AllDimension.eight)),
+                ),
+                child: Image.asset(AllImages.call,height: AllDimension.twenty,
+                    width: AllDimension.twenty),
               ),
-              child: Image.asset(AllImages.call,height: AllDimension.twenty,
-                  width: AllDimension.twenty),
             ),
 
           ],

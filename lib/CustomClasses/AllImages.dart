@@ -26,4 +26,6 @@ class AllImages {
   static String workDone = "assets/images/work_done.png";
   static String backk = "assets/images/backk.png";
   static String menu = "assets/images/menu.png";
+  static String picker = "assets/images/picker.png";
+  static String star = "assets/images/star.png";
 }

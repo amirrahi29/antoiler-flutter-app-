@@ -4,6 +4,7 @@ import 'package:antoiler/view/DashboardPage.dart';
 import 'package:antoiler/view/ErrorPage.dart';
 import 'package:antoiler/view/AuthPages/AuthDetailsPage.dart';
 import 'package:antoiler/view/SearchPage.dart';
+import 'package:antoiler/view/SingleProfilePage.dart';
 import 'package:antoiler/view/SplashPage.dart';
 import 'package:flutter/material.dart';
 import 'PageConstants.dart';
@@ -36,6 +37,10 @@ class OnPageGenerateRoute {
       case PageConstants.chargeDetailsPage:
         {
           return materialPageRoute(widget: ChargesDetailsPage());
+        }
+      case PageConstants.singleProfilePage:
+        {
+          return materialPageRoute(widget: SingleProfilePage());
         }
       default:
         {

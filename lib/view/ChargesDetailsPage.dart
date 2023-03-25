@@ -82,22 +82,22 @@ class _ChargesDetailsState extends State<ChargesDetailsPage>
                       children: <Widget>[
 
                         Expanded(
-                          child: Row(
-                            children: <Widget>[
+                          child: InkWell(
+                            onTap: (){
+                              Navigator.pop(context);
+                            },
+                            child: Row(
+                              children: <Widget>[
 
-                              InkWell(
-                                onTap:(){
-                                  Navigator.pop(context);
-                                },
-                                child: Image.asset(AllImages.backk,
+                                Image.asset(AllImages.backk,
                                     height: AllDimension.twelve,
                                     width: AllDimension.twelve),
-                              ),
-                              SizedBox(width: AllDimension.eight),
-                              Text(AllTitles.viewProfile,
-                                  style: TextStyle(fontSize: AllDimension.fourteen))
+                                SizedBox(width: AllDimension.eight),
+                                Text(AllTitles.viewProfile,
+                                    style: TextStyle(fontSize: AllDimension.fourteen))
 
-                            ],
+                              ],
+                            ),
                           ),
                         ),
 
@@ -127,7 +127,7 @@ class _ChargesDetailsState extends State<ChargesDetailsPage>
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
 
-                                ChargesDetailsWidget.UserDetailsWidget(),
+                                ChargesDetailsWidget.UserDetailsWidget(context),
 
                                 GestureDetector(
                                   onTap: () {

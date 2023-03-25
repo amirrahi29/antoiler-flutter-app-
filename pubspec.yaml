@@ -40,6 +40,8 @@ dependencies:
   http:
   hexcolor:
   get:
+  vimeo_video_player:
+  flutter_staggered_grid_view:
 
 dev_dependencies:
   flutter_test:

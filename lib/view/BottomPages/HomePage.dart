@@ -5,6 +5,7 @@ import 'package:antoiler/view/Widgets/HomePageWidgets.dart';
 import 'package:antoiler/view_model/DashboardPageViewModel.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'CustomModelPopUp.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -101,7 +102,11 @@ class _HomePageState extends State<HomePage> {
             body: SingleChildScrollView(
               child: Column(
                 children: <Widget>[
-                  GlobalMainWidget.CustomTextWithViewAll("Painters", "Within 5KM"),
+                  InkWell(
+                    onTap: (){
+                      CustomModelPopUp.showRangeBottomSheet(context);
+                    }, child: GlobalMainWidget.CustomTextWithViewAll("Painters", "Within 5KM")
+                  ),
                   SizedBox(height: AllDimension.eight),
                   //list
                   SizedBox(

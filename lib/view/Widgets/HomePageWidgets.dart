@@ -17,27 +17,32 @@ class HomePageWidgets {
             fontSize: fontSize, color: color, fontWeight: fontWeight));
   }
 
-  static Widget HeaderWidget() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-        Image.asset(AllImages.logo, height: AllDimension.thirty),
-        Row(
-          children: <Widget>[
-            Icon(Icons.location_on_outlined,
-                size: AllDimension.fourteen, color: AllColors.mainThemeColor),
-            SizedBox(width: AllDimension.four),
-            Text("City Center, Gwalior",
-                style: TextStyle(
-                    color: AllColors.blackColor,
-                    fontSize: AllDimension.fourteen,
-                    fontWeight: FontWeight.w600)),
-            SizedBox(width: AllDimension.four),
-            Icon(Icons.keyboard_arrow_down_outlined,
-                size: AllDimension.fourteen)
-          ],
-        )
-      ],
+  static Widget HeaderWidget(BuildContext context) {
+    return InkWell(
+      onTap: (){
+        CustomModelPopUp.chooseLocationBottomSheet(context);
+      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Image.asset(AllImages.logo, height: AllDimension.thirty),
+          Row(
+            children: <Widget>[
+              Icon(Icons.location_on_outlined,
+                  size: AllDimension.fourteen, color: AllColors.mainThemeColor),
+              SizedBox(width: AllDimension.four),
+              Text("City Center, Gwalior",
+                  style: TextStyle(
+                      color: AllColors.blackColor,
+                      fontSize: AllDimension.fourteen,
+                      fontWeight: FontWeight.w600)),
+              SizedBox(width: AllDimension.four),
+              Icon(Icons.keyboard_arrow_down_outlined,
+                  size: AllDimension.fourteen)
+            ],
+          )
+        ],
+      ),
     );
   }
 
@@ -316,7 +321,7 @@ class HomePageWidgets {
       child: Obx(()=>Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          HomePageWidgets.HeaderWidget(),
+          HomePageWidgets.HeaderWidget(context),
           Row(
             children: <Widget>[
 
