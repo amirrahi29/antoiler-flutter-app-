@@ -1,10 +1,10 @@
 import 'package:antoiler/CustomClasses/AllColors.dart';
 import 'package:antoiler/CustomClasses/AllDimension.dart';
-import 'package:antoiler/CustomClasses/AllImages.dart';
 import 'package:antoiler/view/Widgets/GlobalMainWidget.dart';
 import 'package:antoiler/view/Widgets/HomePageWidgets.dart';
+import 'package:antoiler/view_model/DashboardPageViewModel.dart';
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,12 +14,42 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  ScrollController _controller = ScrollController();
+  final dashboardPageViewModel = Get.put(DashboardPageViewModel());
+
+  int activePageIndex = 0;
+  bool isVisibleUserArea = true;
+
+  @override
+  void dispose() {
+    _controller.removeListener(_onScrollEvent);
+    super.dispose();
+  }
+
+  @override
+  void initState() {
+    _controller.addListener(_onScrollEvent);
+    super.initState();
+  }
+  void _onScrollEvent() {
+    final extentAfter = _controller.position.extentAfter;
+    setState(() {
+      if (extentAfter < 20) {
+        dashboardPageViewModel.onScrollPageUpAndDown(false);
+      }else{
+        dashboardPageViewModel.onScrollPageUpAndDown(true);
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return GlobalMainWidget.globalMainWidget(
         Container(
           margin: EdgeInsets.all(AllDimension.eight),
           child: NestedScrollView(
+            controller: _controller,
             headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled){
               return <Widget>[
                 //header
@@ -29,9 +59,9 @@ class _HomePageState extends State<HomePage> {
                     AllDimension.oneTen,
                     false,
                     false,
-                    false,
+                    true,
                     AllColors.whiteColor,
-                    HomePageWidgets.HeaderHomeWidget()
+                    HomePageWidgets.HeaderHomeWidget(context)
                 ),
                 //search
                 HomePageWidgets.NestedWidget(
@@ -40,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                     AllDimension.sixty,
                     false,
                     false,
-                    true,
+                    false,
                     AllColors.whiteColor,
                     HomePageWidgets.SearchBox(context)
                 ),

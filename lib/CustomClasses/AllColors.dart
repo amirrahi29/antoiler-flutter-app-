@@ -4,8 +4,10 @@ import 'package:hexcolor/hexcolor.dart';
 class AllColors {
   static Color mainThemeColor = HexColor("#F24E1E");
   static Color darkMainThemeColor = HexColor("#fdede8");
+  static Color lightMainThemeColor = HexColor("##FFDBD1");
   static Color officialBlackColor = HexColor("#131313");
   static Color blackColor = HexColor("#2E2E2E");
+  static Color lightGreyColor = HexColor("#F5FBFF");
   static Color whiteColor = HexColor("#ffffff");
   static Color transparent = Colors.transparent;
   static Color redColor = Colors.red;

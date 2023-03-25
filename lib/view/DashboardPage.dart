@@ -1,7 +1,9 @@
 import 'package:antoiler/CustomClasses/AllColors.dart';
 import 'package:antoiler/CustomClasses/BottomTabItems.dart';
+import 'package:antoiler/view_model/DashboardPageViewModel.dart';
 import 'package:flutter/material.dart';
 import 'Widgets/GlobalMainWidget.dart';
+import 'package:get/get.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -13,12 +15,15 @@ class DashboardPage extends StatefulWidget {
 class _DashboardPageState extends State<DashboardPage> {
   //bottom tab items class
   final _bottomTabItems = BottomTabItems();
+  //viewmodel
+  final dashboardViewPageModel = Get.put(DashboardPageViewModel());
 
   @override
   Widget build(BuildContext context) {
-    return GlobalMainWidget.globalMainWidget(
+    return Obx(()=>GlobalMainWidget.globalMainWidget(
         _bottomTabItems.allBottomPages[_bottomTabItems.visit],
-        bottomNavigationBar: BottomNavigationBar(
+        bottomNavigationBar: dashboardViewPageModel.isPageScroll.value == true?
+        BottomNavigationBar(
           currentIndex: _bottomTabItems.visit,
           type: BottomNavigationBarType.fixed,
           selectedItemColor: AllColors.blackColor,
@@ -30,6 +35,7 @@ class _DashboardPageState extends State<DashboardPage> {
               _bottomTabItems.visit = index;
             });
           },
-        ));
+        ):null
+    ));
   }
 }

@@ -3,7 +3,9 @@ import 'package:antoiler/CustomClasses/AllDimension.dart';
 import 'package:antoiler/CustomClasses/AllImages.dart';
 import 'package:antoiler/CustomClasses/routes/PageConstants.dart';
 import 'package:antoiler/view/BottomPages/CustomModelPopUp.dart';
+import 'package:antoiler/view_model/DashboardPageViewModel.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'GlobalMainWidget.dart';
 
@@ -308,20 +310,47 @@ class HomePageWidgets {
     );
   }
 
-  static Widget HeaderHomeWidget() {
+  static Widget HeaderHomeWidget(BuildContext context) {
+    final dashboardViewModel = Get.put(DashboardPageViewModel());
     return SingleChildScrollView(
-      child: Column(
+      child: Obx(()=>Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           HomePageWidgets.HeaderWidget(),
-          SizedBox(height: AllDimension.eight),
-          HomePageWidgets.TitleWidget("Hire Nearby", AllDimension.twenty,
-              FontWeight.normal, AllColors.officialGreyColor),
-          SizedBox(height: AllDimension.four),
-          HomePageWidgets.TitleWidget("Professionals", AllDimension.twentyFour,
-              FontWeight.bold, AllColors.blackColor),
+          Row(
+            children: <Widget>[
+
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+
+                    SizedBox(height: AllDimension.eight),
+                    HomePageWidgets.TitleWidget("Hire Nearby", AllDimension.twenty,
+                        FontWeight.normal, AllColors.officialGreyColor),
+                    SizedBox(height: AllDimension.four),
+                    HomePageWidgets.TitleWidget("Professionals", AllDimension.twentyFour,
+                        FontWeight.bold, AllColors.blackColor),
+
+                  ],
+                ),
+              ),
+
+              dashboardViewModel.isPageScroll.value?SizedBox.shrink()
+                  : InkWell(
+                onTap: (){
+                  Navigator.pushNamed(context, PageConstants.searchPage);
+                },
+                child: Image.asset(AllImages.search,
+                  height: AllDimension.twenty,
+                  width: AllDimension.twenty,
+                ),
+              )
+
+            ],
+          )
         ],
-      ),
+      )),
     );
   }
 
