@@ -6,6 +6,7 @@ class AllColors {
   static Color darkMainThemeColor = HexColor("#fdede8");
   static Color lightMainThemeColor = HexColor("#FFDBD1");
   static Color textGreyColor = HexColor("#807F7F");
+  static Color lightGreenColor = HexColor("#AEFFD5");
   static Color backgroundGreyColor = HexColor("#EEEFF0");
   static Color backgroundBlueColor = HexColor("#F5FBFF");
   static Color officialBlackColor = HexColor("#131313");

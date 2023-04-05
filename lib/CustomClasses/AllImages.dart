@@ -28,4 +28,20 @@ class AllImages {
   static String menu = "assets/images/menu.png";
   static String picker = "assets/images/picker.png";
   static String star = "assets/images/star.png";
+  static String heart = "assets/images/heart.png";
+  static String edit = "assets/images/edit.png";
+  static String secure1 = "assets/images/secure1.png";
+  static String profile = "assets/images/profile.png";
+  static String employes = "assets/images/employes.png";
+
+  //
+  static String communication = "assets/images/communication.png";
+  static String behavior = "assets/images/behavior.png";
+  static String professionalism = "assets/images/professionalism.png";
+  static String quality = "assets/images/quality.png";
+  static String hireAgain = "assets/images/hire_again.png";
+  static String comment = "assets/images/comment.png";
+  static String gallery = "assets/images/gallery.png";
+  static String man = "assets/images/man.png";
+
 }

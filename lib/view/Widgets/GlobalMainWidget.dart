@@ -38,4 +38,26 @@ class GlobalMainWidget {
     );
   }
 
+  static Widget backBtn(String title,BuildContext context){
+    return InkWell(
+      onTap: (){
+        Navigator.pop(context);
+      },
+      child: Row(
+        children: <Widget>[
+          Container(
+              alignment: Alignment.centerLeft,
+              child: Icon(Icons.arrow_back_ios_new_rounded,size: AllDimension.sixteen)),
+          Expanded(
+            child: Container(
+              alignment: Alignment.center,
+              child: Text(title,style: TextStyle(color: AllColors.blackColor,
+                  fontSize: AllDimension.eighteen,fontWeight: FontWeight.bold)),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
 }

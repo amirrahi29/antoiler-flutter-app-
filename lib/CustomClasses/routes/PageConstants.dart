@@ -6,6 +6,8 @@ class PageConstants {
   static const String searchPage = 'searchPage';
   static const String chargeDetailsPage = 'chargeDetailsPage';
   static const String singleProfilePage = 'singleProfilePage';
+  static const String viewProfilePage = 'viewProfilePage';
+  static const String feedbackPage = 'feedbackPage';
 
   //error
   static const String errorPage = 'errorPage';

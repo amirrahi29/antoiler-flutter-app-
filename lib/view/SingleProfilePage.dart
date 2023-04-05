@@ -49,15 +49,15 @@ class _SingleProfilePageState extends State<SingleProfilePage> {
             ),
           ),
 
-            VimeoVideoPlayer(
-              vimeoPlayerModel: VimeoPlayerModel(
-                url: 'https://www.youtube.com/watch?v=FYrDBcSkYPA',
-                systemUiOverlay: const [
-                  SystemUiOverlay.top,
-                  SystemUiOverlay.bottom,
-                ],
-              ),
-            )
+            // VimeoVideoPlayer(
+            //   vimeoPlayerModel: VimeoPlayerModel(
+            //     url: 'https://www.youtube.com/watch?v=FYrDBcSkYPA',
+            //     systemUiOverlay: const [
+            //       SystemUiOverlay.top,
+            //       SystemUiOverlay.bottom,
+            //     ],
+            //   ),
+            // )
 
         ],
       ),

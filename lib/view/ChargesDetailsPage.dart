@@ -6,7 +6,6 @@ import 'package:antoiler/view/ChargesDetailsTabs/ChargesTab.dart';
 import 'package:antoiler/view/ChargesDetailsTabs/ReviewTab.dart';
 import 'package:antoiler/view/ChargesDetailsTabs/WorkDoneTab.dart';
 import 'package:antoiler/view/Widgets/ChargesDetailsWidget.dart';
-import 'package:custom_rating_bar/custom_rating_bar.dart';
 import 'package:flutter/material.dart';
 import 'Widgets/GlobalMainWidget.dart';
 

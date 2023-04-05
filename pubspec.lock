@@ -77,10 +77,18 @@ packages:
     dependency: transitive
     description:
       name: dio
-      sha256: "7d328c4d898a61efc3cd93655a0955858e29a0aa647f0f9e02d59b3bb275e2e8"
+      sha256: "0894a098594263fe1caaba3520e3016d8a855caeb010a882273189cca10f11e9"
       url: "https://pub.dev"
     source: hosted
-    version: "4.0.6"
+    version: "5.1.1"
+  dotted_border:
+    dependency: "direct main"
+    description:
+      name: dotted_border
+      sha256: "07a5c5e8d4e6e992279e190e0352be8faa5b8f96d81c77a78b2d42f060279840"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0+3"
   fake_async:
     dependency: transitive
     description:
@@ -126,6 +134,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.2"
+  flutter_switch:
+    dependency: "direct main"
+    description:
+      name: flutter_switch
+      sha256: b91477f926bba135d2d203d7b24367492662d8d9c3aa6adb960b14c1087d3c41
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.2"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -232,6 +248,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
+  path_drawing:
+    dependency: transitive
+    description:
+      name: path_drawing
+      sha256: bbb1934c0cbb03091af082a6389ca2080345291ef07a5fa6d6e078ba8682f977
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
+  path_parsing:
+    dependency: transitive
+    description:
+      name: path_parsing
+      sha256: e3e67b1629e6f7e8100b367d3db6ba6af4b1f0bb80f64db18ef1fbabd2fa9ccf
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
   plugin_platform_interface:
     dependency: transitive
     description:
@@ -345,10 +377,10 @@ packages:
     dependency: transitive
     description:
       name: video_player_android
-      sha256: dc31c60ae591aa3ccb2d460c3690ceceb86cbb826e73428d817a37650dc4e229
+      sha256: e7de6fabe5d96048cd8f4d710f25c3df84bb3cab8b22da6c082bd8f39e316984
       url: "https://pub.dev"
     source: hosted
-    version: "2.4.2"
+    version: "2.4.3"
   video_player_avfoundation:
     dependency: transitive
     description:
@@ -377,10 +409,10 @@ packages:
     dependency: "direct main"
     description:
       name: vimeo_video_player
-      sha256: b9fe2f12536944c8f98d640002a89d54562f22576d4a7f879435a75752d88d95
+      sha256: e15dc0ff68bec6b23c1be2e0a3ae02430721f4263387cc2f53cc153feab44f65
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.6"
+    version: "0.0.8"
   wakelock:
     dependency: transitive
     description:

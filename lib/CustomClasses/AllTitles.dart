@@ -6,4 +6,9 @@ class AllTitles {
   static String reviews = "Reviews";
   static String workDone = "WorkDone";
   static String charges = "Charges";
+
+  //wishlist tabs
+  static String hired = "Hired";
+  static String contacted = "Contacted";
+  static String wishlist = "Wishlisted";
 }

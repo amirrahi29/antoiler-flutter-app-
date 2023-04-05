@@ -3,9 +3,11 @@ import 'package:antoiler/view/ChargesDetailsPage.dart';
 import 'package:antoiler/view/DashboardPage.dart';
 import 'package:antoiler/view/ErrorPage.dart';
 import 'package:antoiler/view/AuthPages/AuthDetailsPage.dart';
+import 'package:antoiler/view/FeedbackPage.dart';
 import 'package:antoiler/view/SearchPage.dart';
 import 'package:antoiler/view/SingleProfilePage.dart';
 import 'package:antoiler/view/SplashPage.dart';
+import 'package:antoiler/view/ViewProfilePage.dart';
 import 'package:flutter/material.dart';
 import 'PageConstants.dart';
 
@@ -41,6 +43,14 @@ class OnPageGenerateRoute {
       case PageConstants.singleProfilePage:
         {
           return materialPageRoute(widget: SingleProfilePage());
+        }
+      case PageConstants.viewProfilePage:
+        {
+          return materialPageRoute(widget: ViewProfilePage());
+        }
+        case PageConstants.feedbackPage:
+        {
+          return materialPageRoute(widget: FeedbackPage());
         }
       default:
         {
